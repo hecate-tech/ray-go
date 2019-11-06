@@ -5,36 +5,31 @@ package ray
 // cgo_override is used for any functions that the generator cannot handle on
 // its own.
 
-// #define LIGHTGRAY  CLITERAL(Color){ 200, 200, 200, 255 }   // Light Gray
-// #define GRAY       CLITERAL(Color){ 130, 130, 130, 255 }   // Gray
-// #define DARKGRAY   CLITERAL(Color){ 80, 80, 80, 255 }      // Dark Gray
-// #define YELLOW     CLITERAL(Color){ 253, 249, 0, 255 }     // Yellow
-// #define GOLD       CLITERAL(Color){ 255, 203, 0, 255 }     // Gold
-// #define ORANGE     CLITERAL(Color){ 255, 161, 0, 255 }     // Orange
-// #define PINK       CLITERAL(Color){ 255, 109, 194, 255 }   // Pink
-// #define RED        CLITERAL(Color){ 230, 41, 55, 255 }     // Red
-// #define MAROON     CLITERAL(Color){ 190, 33, 55, 255 }     // Maroon
-// #define GREEN      CLITERAL(Color){ 0, 228, 48, 255 }      // Green
-// #define LIME       CLITERAL(Color){ 0, 158, 47, 255 }      // Lime
-// #define DARKGREEN  CLITERAL(Color){ 0, 117, 44, 255 }      // Dark Green
-// #define SKYBLUE    CLITERAL(Color){ 102, 191, 255, 255 }   // Sky Blue
-// #define BLUE       CLITERAL(Color){ 0, 121, 241, 255 }     // Blue
-// #define DARKBLUE   CLITERAL(Color){ 0, 82, 172, 255 }      // Dark Blue
-// #define PURPLE     CLITERAL(Color){ 200, 122, 255, 255 }   // Purple
-// #define VIOLET     CLITERAL(Color){ 135, 60, 190, 255 }    // Violet
-// #define DARKPURPLE CLITERAL(Color){ 112, 31, 126, 255 }    // Dark Purple
-// #define BEIGE      CLITERAL(Color){ 211, 176, 131, 255 }   // Beige
-// #define BROWN      CLITERAL(Color){ 127, 106, 79, 255 }    // Brown
-// #define DARKBROWN  CLITERAL(Color){ 76, 63, 47, 255 }      // Dark Brown
-
 // Colors must be done separately, because the auto generator can't handle the
 // CLITERAL Macro and then translate them into an enum.
-
 var (
-// TODO add rest of the colors.
-)
+	LightGray  = Color{R: 200, G: 200, B: 200, A: 255}
+	Gray       = Color{R: 130, G: 130, B: 130, A: 255}
+	DarkGray   = Color{R: 80, G: 80, B: 80, A: 255}
+	Yellow     = Color{R: 253, G: 249, B: 0, A: 255}
+	Gold       = Color{R: 255, G: 203, B: 0, A: 255}
+	Orange     = Color{R: 255, G: 161, B: 0, A: 255}
+	Pink       = Color{R: 255, G: 109, B: 194, A: 255}
+	Red        = Color{R: 230, G: 41, B: 55, A: 255}
+	Maroon     = Color{R: 190, G: 33, B: 55, A: 255}
+	Green      = Color{R: 0, G: 228, B: 48, A: 255}
+	Lime       = Color{R: 0, G: 158, B: 47, A: 255}
+	DarkGreen  = Color{R: 0, G: 117, B: 44, A: 255}
+	SkyBlue    = Color{R: 102, G: 191, B: 255, A: 255}
+	Blue       = Color{R: 0, G: 121, B: 241, A: 255}
+	DarkBlue   = Color{R: 0, G: 82, B: 172, A: 255}
+	Purple     = Color{R: 200, G: 122, B: 255, A: 255}
+	Violet     = Color{R: 135, G: 60, B: 190, A: 255}
+	DarkPurple = Color{R: 112, G: 31, B: 126, A: 255}
+	Beige      = Color{R: 211, G: 176, B: 131, A: 255}
+	Brown      = Color{R: 127, G: 106, B: 79, A: 255}
+	DarkBrown  = Color{R: 76, G: 63, B: 47, A: 255}
 
-var (
 	White    = Color{R: 255, G: 255, B: 255, A: 255}
 	Black    = Color{R: 0, G: 0, B: 0, A: 255}
 	Blank    = Color{R: 0, G: 0, B: 0, A: 0}
